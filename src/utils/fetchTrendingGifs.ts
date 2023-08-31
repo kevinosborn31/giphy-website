@@ -2,6 +2,9 @@ import axios from "axios";
 import { GiphyEndpoints } from "../enum/GiphyEndpoints";
 
 export const fetchTrendingGifs = async () => {
+  if (!process.env.GIPHY_API_KEY) {
+    throw new Error("Missing giphy api key");
+  }
   try {
     const response = await axios.get(GiphyEndpoints.Trending, {
       params: {
