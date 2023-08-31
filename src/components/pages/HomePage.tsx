@@ -5,7 +5,7 @@ const HomePage = () => {
 
   return (
     <Box>
-        <GifList />
+        <GifList gifs={[]}/>
     </Box>
   );
 };

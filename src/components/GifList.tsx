@@ -1,10 +1,18 @@
 import { Box } from '@mui/material';
+import { FC } from 'react';
+import GifListItem from './GifListItem';
+import { Gif } from '../types/Gif';
 
-const GifList = () => {
+interface IGifList {
+  gifs: Gif[];
+}
 
+const GifList: FC<IGifList> = ({ gifs }) => {
   return (
     <Box>
-        Gif list
+      {gifs.map((gif: Gif) => (
+        <GifListItem gif={gif} /> 
+      ))}
     </Box>
   );
 };
