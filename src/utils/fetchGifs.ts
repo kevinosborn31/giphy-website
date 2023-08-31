@@ -5,7 +5,7 @@ export const fetchGifs = async () => {
     const apiKey = '3jx7BW9DuI4kWrEIM7BgRUTm4dbhTRfe'
 
   try {
-    const response = await axios.get('api.giphy.com/v1/gifs/trending', {
+    const response = await axios.get('https://api.giphy.com/v1/gifs/trending', {
         params: {
             apiKey: apiKey
         }
