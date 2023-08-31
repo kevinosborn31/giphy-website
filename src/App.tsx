@@ -1,5 +1,5 @@
-import HomePage from './components/pages/HomePage';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import HomePage from "./components/pages/HomePage";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 const queryClient = new QueryClient();
 
@@ -9,6 +9,6 @@ const App = () => {
       <HomePage />
     </QueryClientProvider>
   );
-}
+};
 
 export default App;
