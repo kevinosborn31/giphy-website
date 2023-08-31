@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { FC } from 'react';
 import GifListItem from './GifListItem';
 import { Gif } from '../types/Gif';
@@ -10,9 +10,13 @@ interface IGifList {
 const GifList: FC<IGifList> = ({ gifs }) => {
   return (
     <Box>
-      {gifs.map((gif: Gif) => (
-        <GifListItem gif={gif} /> 
-      ))}
+      {gifs && gifs.length > 0 ? (
+        gifs.map((gif: Gif) => (
+          <GifListItem key={gif.id} gif={gif} />
+        ))
+      ) : (
+        <Typography>No GIFs</Typography>
+      )}
     </Box>
   );
 };

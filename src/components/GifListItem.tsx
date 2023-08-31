@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { FC } from 'react';
 import { Gif } from '../types/Gif';
 
@@ -10,7 +10,8 @@ const GifListItem: FC<IGifListItem> = ({ gif }) => {
 
   return (
     <Box>
-        GifListItem
+        <Typography>{gif.id}</Typography>
+        <img src={gif.url} alt={gif.id} />
     </Box>
   );
 };
