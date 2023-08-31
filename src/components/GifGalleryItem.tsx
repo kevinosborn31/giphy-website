@@ -11,7 +11,7 @@ const GifGalleryItem: FC<IGifGalleryItemProps> = ({ gif }) => {
   return (
     <Box>
         <Typography>{gif.id}</Typography>
-        <img src={gif.url} alt={gif.id} />
+        <iframe src={gif.embed_url} />
     </Box>
   );
 };
