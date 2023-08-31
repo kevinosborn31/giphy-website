@@ -1,5 +1,7 @@
 ## How to run
 - Install dependencies `npm i`
+- Sign up for a developer Giphy API key, to populate the environment variable
+- Create a `.env` file and populate it with `GIPHY_API_KEY=YOUR_KEY_GOES_HERE`
 - Start application `npm start`
 - To run test cases: `npm test`
 
