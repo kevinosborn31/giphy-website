@@ -9,7 +9,7 @@ const HomePage = () => {
 
     const [gifs, setGifs] = useState<Gif[]>([]);
 
-    useQuery(
+    const { isLoading, isError } = useQuery(
         'gifs',
         () => fetchGifs(),
         {
@@ -20,9 +20,11 @@ const HomePage = () => {
         }
       );
 
+      console.log(gifs);
+
   return (
     <Box>
-        <GifList gifs={gifs}/>
+        <GifList gifs={gifs} isLoading={isLoading} isError={isError}/>
     </Box>
   );
 };
