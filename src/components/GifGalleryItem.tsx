@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box   } from "@mui/material";
 import { FC } from "react";
 import { Gif } from "../types/Gif";
 
@@ -9,7 +9,6 @@ interface IGifGalleryItemProps {
 const GifGalleryItem: FC<IGifGalleryItemProps> = ({ gif }) => {
   return (
     <Box>
-      <Typography>{gif.id}</Typography>
       <iframe src={gif.embed_url} />
     </Box>
   );

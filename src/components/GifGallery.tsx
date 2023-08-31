@@ -18,6 +18,7 @@ const GifGallery: FC<IGifGalleryProps> = ({ gifs, isLoading, isError }) => {
           alignItems="center"
           justifyContent="center"
           height="100%"
+          data-testid="loading-state"
         >
           <CircularProgress size={150} thickness={4} />
         </Box>

@@ -12,6 +12,12 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
     onSearch(searchTerm);
   };
 
+  const handleEnterSearch = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      onSearch(searchTerm);
+    }
+  };
+
   return (
     <Box
       display="flex"
@@ -26,6 +32,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
         variant="outlined"
         size="small"
         sx={{ marginRight: "8px", width: "500px" }}
+        onKeyDown={handleEnterSearch}
       />
       <Button variant="contained" color="primary" onClick={handleSearch}>
         Search
